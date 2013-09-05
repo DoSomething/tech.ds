@@ -1,16 +1,5 @@
 box: wercker/ubuntu12.04-nodejs0.10
 # Build definition
-build:
-  # The steps that will be executed on build
-  steps:
-    # A step that executes `npm install` command
-    - npm-install
-#    - script:
-#        name: Install sass
-#        code: |
-#          sudo gem install sass -v '>=3.3.0alpha'  --pre
-#    - grunt:
-#        tasks: build
 deploy:
   steps:
       # Execute the s3sync deploy step, a step provided by wercker
@@ -18,5 +7,5 @@ deploy:
           key_id: $AWS_ACCESS_KEY_ID
           key_secret: $AWS_SECRET_ACCESS_KEY
           bucket_url: $AWS_BUCKET_URL
-          source_dir: build/
+          source_dir: .
 
