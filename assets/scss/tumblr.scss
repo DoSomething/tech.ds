@@ -27,6 +27,7 @@ body {
   background: #fff;
   font-family: din-web-reg;
   font-size: 18px;
+  margin: 0 0 3em 0;
 }
 
 a {
@@ -45,21 +46,32 @@ p, li, a {
   font-weight: 400;
 }
 
-
 #posts {
   margin: 150px auto 0;
-  width: 30em;
+  max-width: 30em;
+  width: 100%;
   color: #222;
   h2 a {
     color: $primary-light;
     text-transform: uppercase;
     text-decoration: none;
   }
+  img {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 // ---------------
 // GLOBAL ELEMENTS
 // ---------------
+
+.header-wrapper {
+  background: #f8f8f8;
+  padding: 1.5em 0 2em;
+}
 
 #header {
   position: relative;
@@ -68,16 +80,16 @@ p, li, a {
   width: 150px;
   height: 150px;
   background-image: url("http://www.dosomething.org/files/u/tumblr/tech.ds_.png");
-  background-size: 150px auto;
+  background-size: 2em auto;
   background-position: 50% 50%;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: #fff;
   background-repeat: no-repeat;
   border-radius: 100px;
 }
 
 .header-badge {
   position: absolute;
-  bottom: -55px;
+  bottom: -70px;
   width: 85%;
   font-family: Din-web-reg;
   font-weight: 200;
