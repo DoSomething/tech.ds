@@ -13,10 +13,39 @@
  *
  */
 
+// ----- //
+// RESET //
+// ----- //
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
 // --------- //
 // VARIABLES //
 // --------- //
-$primary-dark: #aaa;
+$primary-dark: #9ec2d7;
 $primary-light: #ddd;
 
 // ------ //
@@ -25,7 +54,7 @@ $primary-light: #ddd;
 
 .container {
   margin: 0 auto;
-  width: 95%;
+  width: 90%;
   max-width: 25em;
 }
 
@@ -42,7 +71,21 @@ h1, h2, h3 {
   }
 }
 
+h1 {
+  color: $primary-dark;
+  font-weight: 600;
+  font-size: 3em;
+  line-height: 1.3em;
+  text-transform: uppercase;
+  margin: 1em 0 1em -1em;
+  @media only screen and (max-width: 750px) {
+    font-size: 2em;
+    margin: 1em 0 0.5em;
+  }
+}
+
 h2 {
+  font-size: 1em;
   font-weight: 500;
   color: #888;
 }
@@ -58,8 +101,11 @@ h3, p {
 body {
   background: #fff;
   font-family: din-web-reg;
-  font-size: 18px;
   margin: 0 0 3em 0;
+  font-size: 18px;
+  @media only screen and (max-width: 600px) {
+    font-size: 16px;
+  }
 }
 
 img {
@@ -67,9 +113,10 @@ img {
 }
 
 a {
-  color: #9ec2d7;
+  color: $primary-dark;
   text-decoration: underline;
   &:hover {
+    transition: color ease 0.5s;
     color: lighten($primary-dark, 10);
   }
 }
@@ -80,6 +127,7 @@ a {
 
 #posts {
   color: #222;
+  padding: 0 5%;
 
   h2 a {
     color: $primary-light;
@@ -96,6 +144,10 @@ a {
 }
 
 .body-text {
+  margin: 2em 0;
+  @media only screen and (max-width: 750px) {
+    margin: 1em 0 0;
+  }
   img {
     width: 100%;
     max-width: 500px;
@@ -114,22 +166,22 @@ a {
   border-bottom: 1px solid #eee;
 
   .container {
-    height: 85px;
+    height: 60px;
     position: relative;
   }
 
   .logo {
     display: block;
     position: absolute;
-    left: 0px;
-    width: 75px;
-    height: 85px;
+    left: 0;
+    width: auto;
+    height: 60px;
   }
 
   .title {
     position: absolute;
-    top: 45px;
-    left: 90px;
+    top: 30px;
+    left: 65px;
     color: #bbb;
   }
 }
