@@ -13,15 +13,47 @@
  *
  */
 
-// ---------
-// VARIABLES
-// ---------
+// --------- //
+// VARIABLES //
+// --------- //
 $primary-dark: #aaa;
 $primary-light: #ddd;
 
-// ----------------
-// GENERIC ELEMENTS
-// ----------------
+// ------ //
+// LAYOUT //
+// ------ //
+
+.container {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 25em;
+}
+
+// ---------- //
+// TYPOGRAPHY //
+// ---------- //
+
+h1, h2, h3 {
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+h2 {
+  font-weight: 500;
+  color: #888;
+}
+
+h3, p {
+  font-weight: 400;
+}
+
+// ---------------- //
+// GENERIC ELEMENTS //
+// ---------------- //
 
 body {
   background: #fff;
@@ -30,32 +62,40 @@ body {
   margin: 0 0 3em 0;
 }
 
+img {
+  width: 100%;
+}
+
 a {
-  color: $primary-dark;
+  color: #9ec2d7;
   text-decoration: underline;
   &:hover {
     color: lighten($primary-dark, 10);
   }
 }
 
-// ----------
-// TYPOGRAPHY
-// ----------
-
-p, li, a {
-  font-weight: 400;
-}
+// ----- //
+// POSTS //
+// ----- //
 
 #posts {
-  margin: 150px auto 0;
-  max-width: 30em;
-  width: 100%;
   color: #222;
+
   h2 a {
     color: $primary-light;
     text-transform: uppercase;
     text-decoration: none;
   }
+
+  .avatar {
+    width: 64px;
+    float: right;
+    margin: 0 0 1em 0;
+    border-radius: 2px;
+  }
+}
+
+.body-text {
   img {
     width: 100%;
     max-width: 500px;
@@ -64,47 +104,33 @@ p, li, a {
   }
 }
 
-// ---------------
-// GLOBAL ELEMENTS
-// ---------------
-
-.header-wrapper {
-  background: #f8f8f8;
-  padding: 1.5em 0 2em;
-}
+// ------ //
+// HEADER //
+// ------ //
 
 #header {
-  position: relative;
-  margin: 0px auto;
-  padding: 1em;
-  width: 150px;
-  height: 150px;
-  background-image: url("http://www.dosomething.org/files/u/tumblr/tech.ds_.png");
-  background-size: 2em auto;
-  background-position: 50% 50%;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  border-radius: 100px;
-}
+  padding: 2em 0;
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
 
-.header-badge {
-  position: absolute;
-  bottom: -70px;
-  width: 85%;
-  font-family: Din-web-reg;
-  font-weight: 200;
-  font-size: 2em;
-  text-decoration: none;
-  text-align: center;
-  color: #ddd;
-}
+  .container {
+    height: 85px;
+    position: relative;
+  }
 
-h1 {
- font-family: din-web-reg;
- font-weight: 200;
- font-size: 24px;
-  h1 a {
-    color: #ccc !important;
+  .logo {
+    display: block;
+    position: absolute;
+    left: 0px;
+    width: 75px;
+    height: 85px;
+  }
+
+  .title {
+    position: absolute;
+    top: 45px;
+    left: 90px;
+    color: #bbb;
   }
 }
 
