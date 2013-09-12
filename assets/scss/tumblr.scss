@@ -48,6 +48,10 @@ time, mark, audio, video {
 $primary-dark: #9ec2d7;
 $primary-light: #ddd;
 
+$title-first: #93b6ca;
+$title-second: #b4d0e0;
+$title-third: #d1e2ec;
+
 // ------ //
 // LAYOUT //
 // ------ //
@@ -72,12 +76,9 @@ h1, h2, h3 {
 }
 
 h1 {
-  color: $primary-dark;
-  font-weight: 600;
   font-size: 3em;
+  font-weight: 600;
   line-height: 1.3em;
-  text-transform: uppercase;
-  margin: 1em 0 1em -1em;
   transition: font-size 0.2s ease;
   @media only screen and (max-width: 750px) {
     font-size: 2em;
@@ -125,6 +126,24 @@ a {
 // ----- //
 // POSTS //
 // ----- //
+
+#post-title {
+  color: $primary-dark;
+  text-transform: uppercase;
+  margin: 1em 0 1em -1em;
+}
+
+.title-1 {
+  color: $title-first;
+}
+
+.title-2 {
+  color: $title-second;
+}
+
+.title-3 {
+  color: $title-third;
+}
 
 #posts {
   color: #222;
