@@ -136,6 +136,10 @@ a {
   color: $primary-dark;
   text-transform: uppercase;
   margin: 1em 0 1em -1em;
+  @media only screen and (max-width: 600px) {
+    margin: 0.5em 0;
+    font-size: 1.7em;
+  }
 }
 
 .title-2 {
