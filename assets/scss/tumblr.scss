@@ -78,9 +78,10 @@ h1 {
   line-height: 1.3em;
   text-transform: uppercase;
   margin: 1em 0 1em -1em;
+  transition: font-size 0.2s ease;
   @media only screen and (max-width: 750px) {
     font-size: 2em;
-    margin: 1em 0 0.5em;
+    margin: 0.8em 0 0.5em;
   }
 }
 
@@ -164,10 +165,15 @@ a {
   padding: 2em 0;
   background: #fafafa;
   border-bottom: 1px solid #eee;
+  transition: padding 0.2s ease;
+  @media only screen and (max-width: 500px) {
+    padding: 0.8em 0;
+  }
 
   .container {
     height: 60px;
     position: relative;
+      height: 35px;
   }
 
   .logo {
@@ -176,6 +182,10 @@ a {
     left: 0;
     width: auto;
     height: 60px;
+    transition: height 0.2s ease;
+    @media only screen and (max-width: 500px) {
+      height: 35px;
+    }
   }
 
   .title {
@@ -183,6 +193,10 @@ a {
     top: 30px;
     left: 65px;
     color: #bbb;
+    @media only screen and (max-width: 500px) {
+      top: 13px;
+      left: 40px;
+    }
   }
 }
 
