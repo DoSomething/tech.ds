@@ -218,7 +218,8 @@ a {
     }
   }
 
-  .title {
+  .title,
+  .subtitle {
     position: absolute;
     top: 30px;
     left: 65px;
@@ -226,6 +227,23 @@ a {
     @media only screen and (max-width: 500px) {
       top: 13px;
       left: 40px;
+    }
+  }
+
+  .subtitle {
+    right: 0;
+    color: #ccc;
+    text-align: right;
+    @media only screen and (max-width: 500px) {
+      top: -3px;
+      left: auto;
+      width: 130px;
+      height: 3em;
+      font-size: 14px;
+    }
+    @media only screen and (max-width: 400px) {
+      top: 0px;
+      font-size: 12px;
     }
   }
 }
