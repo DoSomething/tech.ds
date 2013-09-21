@@ -27,6 +27,7 @@ $title-second: #b4d0e0;
 $title-third: #d1e2ec;
 
 $anchor: $title-first;
+$anchor-hover: #769cb3;
 
 // ----- //
 // RESET //
@@ -130,8 +131,8 @@ a {
   color: $anchor;
   text-decoration: underline;
   &:hover {
-    transition: color ease 0.5s;
-    color: darken($anchor, 10);
+    color: $anchor-hover;
+    transition: color ease-in-out 0.5s;
   }
 }
 
@@ -190,12 +191,8 @@ a {
     text-align: right;
 
     a {
-      text-decoration: none;
       color: $header-subtitle;
-      &:hover {
-        transition: color 0.5s ease;
-        color: $anchor;
-      }
+      text-decoration: none;
     }
 
     @media only screen and (max-width: 500px) {
@@ -253,15 +250,15 @@ a {
 .body-text {
   margin: 2em 0;
 
-  @media only screen and (max-width: 750px) {
-    margin: 1em 0 0;
-  }
-
   img {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
     display: block;
+  }
+
+  @media only screen and (max-width: 750px) {
+    margin: 1em 0 0;
   }
 }
 
