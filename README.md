@@ -1,6 +1,9 @@
-# ds-tech
-## DoSomething.org's Data, Design and Engineering blog
-This repository will test using GitHub to host CSS stylesheets.
+# tech.ds
+DoSomething.org's Data, Design and Engineering blog is called tech.ds and can be found at [tech.dosomething.org](http://tech.dosomething.org/).
+
+The blog is built with a simple continuous integration system powered by Wercker that automatically updates a CSS file hosted with Amazon S3 whenever a commit is pushed to `master`. In the repository you'll find a simple task runner, some SCSS files that provide basic styles and import Do Something's [Pattern Library](https://github.com/dosomething/ds-neue/) and the compiled CSS.
+
+tech.ds is built on Tumblr.
 
 ## License
 ```
